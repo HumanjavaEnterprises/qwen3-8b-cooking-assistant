@@ -1,0 +1,17 @@
+name: Guide or tool bug
+description: A wrong figure, a broken command, or a bug in examples/ or tools/
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: The command or step, what you expected, and what you got (error output helps).
+    validations: {required: true}
+  - type: input
+    id: setup
+    attributes:
+      label: Your setup
+      description: OS, GPU and memory, runtime and version (Ollama / llama.cpp / LM Studio), model file or tag
+    validations: {required: true}

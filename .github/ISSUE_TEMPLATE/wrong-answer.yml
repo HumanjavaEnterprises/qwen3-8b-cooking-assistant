@@ -1,0 +1,41 @@
+name: Model got something wrong
+description: The assistant invented recipe details, misread a recipe, or gave unsafe advice
+title: "[answer] "
+labels: ["model-answer"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks! Real examples are the most useful thing you can send us. Please don't paste private or personal information.
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What went wrong
+      options:
+        - It invented a quantity, time, temperature, ingredient or step
+        - It misread the recipe I gave it
+        - It should have asked for the recipe but didn't
+        - It asked for a recipe when it didn't need one
+        - Unsafe or wrong food-safety advice
+        - Something else
+    validations: {required: true}
+  - type: textarea
+    id: prompt
+    attributes:
+      label: What you sent
+      description: The recipe (if any) and your question, exactly as sent. Include the system prompt if you changed it.
+    validations: {required: true}
+  - type: textarea
+    id: answer
+    attributes:
+      label: What it answered
+    validations: {required: true}
+  - type: textarea
+    id: expected
+    attributes:
+      label: What a good answer would have been
+  - type: input
+    id: version
+    attributes:
+      label: Version and runtime
+      description: e.g. Ollama vveerrgg/qwen3-8b-cooking-assistant:v1, or the GGUF file + llama.cpp version
+    validations: {required: true}

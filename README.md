@@ -68,6 +68,7 @@ numbers** (scaling, unit conversion).
 | [SMALL-GPU.md](SMALL-GPU.md) | the full process for a small-GPU machine, with measured memory and speed |
 | [EVALS.md](EVALS.md) | how the model was checked, and the results |
 | [examples/](examples/) | `ask.sh` (curl), `chat.py` (Python, any OpenAI-compatible server), an Ollama `Modelfile` |
+| [CONTRIBUTING.md](CONTRIBUTING.md) · [SECURITY.md](SECURITY.md) | report a wrong answer, a bug or a security issue |
 | [tools/vram_estimate.py](tools/vram_estimate.py) | memory planner, fitted to measurements (within 0.03 GiB on 21 setups); `python -m pytest tests` |
 
 ## Licence and credits
