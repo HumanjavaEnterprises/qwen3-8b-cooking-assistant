@@ -11,9 +11,9 @@ the time (base: 83.1%). Four open-weights judges, see [EVALS.md](EVALS.md).
 | | |
 |---|---|
 | **Run it on a small GPU** | [SMALL-GPU.md](SMALL-GPU.md): pick a file for your card, install, start, test, troubleshoot |
-| **GGUF** (llama.cpp, Ollama, LM Studio) | [HumanjavaEnterprises/Qwen3-8B-Cooking-v8-GGUF](https://huggingface.co/HumanjavaEnterprises/Qwen3-8B-Cooking-v8-GGUF) |
-| **Full precision** (Transformers, vLLM) | [HumanjavaEnterprises/Qwen3-8B-Cooking-v8](https://huggingface.co/HumanjavaEnterprises/Qwen3-8B-Cooking-v8) |
-| **Evaluation set** (every question, answer and judge verdict behind the numbers) | [HumanjavaEnterprises/cooking-eval-v8](https://huggingface.co/datasets/HumanjavaEnterprises/cooking-eval-v8) |
+| **GGUF** (llama.cpp, Ollama, LM Studio) | [HumanjavaEnterprises/Qwen3-8B-Cooking-GGUF](https://huggingface.co/HumanjavaEnterprises/Qwen3-8B-Cooking-GGUF) |
+| **Full precision** (Transformers, vLLM) | [HumanjavaEnterprises/Qwen3-8B-Cooking](https://huggingface.co/HumanjavaEnterprises/Qwen3-8B-Cooking) |
+| **Evaluation set** (every question, answer and judge verdict behind the numbers) | [HumanjavaEnterprises/cooking-eval](https://huggingface.co/datasets/HumanjavaEnterprises/cooking-eval) |
 | **Results** | [EVALS.md](EVALS.md) |
 | **Help refine it** | [Label five answers](https://label-test.humanjava.com/?s=cook4&k=cook-9ac741a1e387): blind, no account, a few minutes |
 
@@ -29,8 +29,8 @@ With llama.cpp on a 6 GB GPU:
 
 ```bash
 pip install -U huggingface_hub
-hf download HumanjavaEnterprises/Qwen3-8B-Cooking-v8-GGUF hj-cooking-qwen3-8b-v8c-Q4_K_M.gguf --local-dir .
-llama-server -m hj-cooking-qwen3-8b-v8c-Q4_K_M.gguf -ngl 99 -c 8192 -fa on -ctk q8_0 -ctv q8_0 --reasoning-budget 0 --port 8080
+hf download HumanjavaEnterprises/Qwen3-8B-Cooking-GGUF qwen3-8b-cooking-v8-Q4_K_M.gguf --local-dir .
+llama-server -m qwen3-8b-cooking-v8-Q4_K_M.gguf -ngl 99 -c 8192 -fa on -ctk q8_0 -ctv q8_0 --reasoning-budget 0 --port 8080
 examples/ask.sh          # -> "You would need 900 ml of milk."
 ```
 

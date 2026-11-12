@@ -76,14 +76,14 @@ ollama run vveerrgg/qwen3-8b-cooking:q6_k     # 8 GB cards
 ollama run vveerrgg/qwen3-8b-cooking:q8_0     # 10 GB and up
 ```
 
-Or straight from Hugging Face: `ollama run hf.co/HumanjavaEnterprises/Qwen3-8B-Cooking-v8-GGUF:Q4_K_M`.
+Or straight from Hugging Face: `ollama run hf.co/HumanjavaEnterprises/Qwen3-8B-Cooking-GGUF:Q4_K_M`.
 
 Ollama picks how many layers fit by itself. The model repo carries the chat template, the trained system prompt and
 the sampling settings, so this one line is all you need. (Tested with Ollama 0.12.6. Without that template Ollama
 guesses a raw format and the model rambles: if you build it from the GGUF file yourself, use
 [examples/Modelfile](examples/Modelfile), step 4.)
 
-**LM Studio** (point and click). Search for `HumanjavaEnterprises/Qwen3-8B-Cooking-v8-GGUF` in the model browser,
+**LM Studio** (point and click). Search for `HumanjavaEnterprises/Qwen3-8B-Cooking-GGUF` in the model browser,
 download the file from step 2, set **GPU offload** and **context length** from the table, turn thinking off, and
 paste the system prompt from step 5.
 
@@ -95,10 +95,10 @@ AMD / Intel, macOS for Apple Silicon), or `brew install llama.cpp` on a Mac.
 
 ```bash
 pip install -U huggingface_hub
-hf download HumanjavaEnterprises/Qwen3-8B-Cooking-v8-GGUF hj-cooking-qwen3-8b-v8c-Q4_K_M.gguf --local-dir .
+hf download HumanjavaEnterprises/Qwen3-8B-Cooking-GGUF qwen3-8b-cooking-v8-Q4_K_M.gguf --local-dir .
 ```
 
-Check it against `SHA256SUMS` in the model repo if you like: `sha256sum hj-cooking-qwen3-8b-v8c-Q4_K_M.gguf`.
+Check it against `SHA256SUMS` in the model repo if you like: `sha256sum qwen3-8b-cooking-v8-Q4_K_M.gguf`.
 
 For Ollama with the trained system prompt:
 
@@ -116,7 +116,7 @@ tokens.
 6 GB card, everything on the GPU:
 
 ```bash
-llama-server -m hj-cooking-qwen3-8b-v8c-Q4_K_M.gguf \
+llama-server -m qwen3-8b-cooking-v8-Q4_K_M.gguf \
   -ngl 99 -c 8192 -fa on -ctk q8_0 -ctv q8_0 \
   --reasoning-budget 0 --port 8080
 ```
@@ -124,7 +124,7 @@ llama-server -m hj-cooking-qwen3-8b-v8c-Q4_K_M.gguf \
 4 GB card, part on the GPU:
 
 ```bash
-llama-server -m hj-cooking-qwen3-8b-v8c-Q4_K_M.gguf \
+llama-server -m qwen3-8b-cooking-v8-Q4_K_M.gguf \
   -ngl 23 -c 4096 -fa on -ctk q8_0 -ctv q8_0 \
   --reasoning-budget 0 --port 8080
 ```
