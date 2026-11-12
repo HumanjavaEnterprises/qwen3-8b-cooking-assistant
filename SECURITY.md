@@ -11,7 +11,8 @@ machines, so we treat integrity reports as a priority.
 
 **Please report security issues privately. Do not open a public issue.**
 
-- Use GitHub's **private vulnerability reporting** (Security tab → "Report a vulnerability"), or
+- Use GitHub's **private vulnerability reporting**: Security tab → "Report a vulnerability" (preferred; it reaches
+  the maintainers directly), or
 - email **security@humanjava.com** with details and steps to reproduce.
 
 Please include what you found and its impact, how to reproduce it, and the version you used (Hugging Face revision or
