@@ -13,8 +13,9 @@ the time (base: 83.1%). Four open-weights judges, see [EVALS.md](EVALS.md).
 | **Run it on a small GPU** | [SMALL-GPU.md](SMALL-GPU.md): pick a file for your card, install, start, test, troubleshoot |
 | **GGUF** (llama.cpp, Ollama, LM Studio) | [HumanjavaEnterprises/Qwen3-8B-Cooking-v8-GGUF](https://huggingface.co/HumanjavaEnterprises/Qwen3-8B-Cooking-v8-GGUF) |
 | **Full precision** (Transformers, vLLM) | [HumanjavaEnterprises/Qwen3-8B-Cooking-v8](https://huggingface.co/HumanjavaEnterprises/Qwen3-8B-Cooking-v8) |
-| **Training data** (with per-record attribution) | [HumanjavaEnterprises/cooking-qa-v8](https://huggingface.co/datasets/HumanjavaEnterprises/cooking-qa-v8) |
+| **Evaluation set** (every question, answer and judge verdict behind the numbers) | [HumanjavaEnterprises/cooking-eval-v8](https://huggingface.co/datasets/HumanjavaEnterprises/cooking-eval-v8) |
 | **Results** | [EVALS.md](EVALS.md) |
+| **Help refine it** | [Label five answers](https://label-test.humanjava.com/?s=cook4&k=cook-9ac741a1e387): blind, no account, a few minutes |
 
 ## Quick start (6 GB GPU)
 
@@ -61,8 +62,8 @@ numbers** (scaling, unit conversion).
 
 ## Licence and credits
 
-Code and docs in this repo: MIT. Model weights: Apache-2.0, same as the base model. Training data: CC BY-SA 4.0
-(per-record attribution in the dataset).
+Code and docs in this repo: MIT. Model weights: Apache-2.0, same as the base model. Evaluation set text: CC BY-SA 4.0
+(per-row attribution in the dataset).
 
 Base model: [Qwen3-8B](https://huggingface.co/Qwen/Qwen3-8B) by the Qwen team (Apache-2.0). Runtime used for every
 number here: [llama.cpp](https://github.com/ggml-org/llama.cpp) (MIT). Cookbook sources: Wikibooks Cookbook

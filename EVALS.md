@@ -22,7 +22,11 @@ And when the recipe **is** shown (290 questions, 3 of 4 judges agree): Qwen3-8B 
 
 3 of 4: 72 questions where only the base invents, 3 where only this model does (McNemar p < 1e-17). Caveats: the
 judges are models, and model judges tend to share mistakes, so four agreeing is less than four independent checks.
-Qwen3.8-27B also labelled part of this model's training data. A blind human-labelled set is in progress.
+Qwen3.8-27B also labelled part of this model's training data.
+
+**We are still refining the numbers with people.** Label Test is our blind labelling tool: you see five answers, one at
+a time, and decide whether each made recipe details up, asked for the recipe, or gave honest general help. No
+account; we keep only a name or initials and your labels. [Label five answers](https://label-test.humanjava.com/?s=cook4&k=cook-9ac741a1e387).
 
 ## Do the small files lose quality?
 
