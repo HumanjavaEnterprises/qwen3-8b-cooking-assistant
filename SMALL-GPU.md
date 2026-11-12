@@ -71,11 +71,13 @@ Pick one.
 **Ollama** (easiest). Install from [ollama.com](https://ollama.com), then:
 
 ```bash
-ollama run hf.co/HumanjavaEnterprises/Qwen3-8B-Cooking-v8-GGUF:Q4_K_M --think=false
+ollama run hf.co/HumanjavaEnterprises/Qwen3-8B-Cooking-v8-GGUF:Q4_K_M
 ```
 
-Ollama picks how many layers fit by itself. To use the system prompt the model was trained with, build it from
-[examples/Modelfile](examples/Modelfile) instead (step 4).
+Ollama picks how many layers fit by itself. The model repo carries the chat template, the trained system prompt and
+the sampling settings, so this one line is all you need. (Tested with Ollama 0.12.6. Without that template Ollama
+guesses a raw format and the model rambles: if you build it from the GGUF file yourself, use
+[examples/Modelfile](examples/Modelfile), step 4.)
 
 **LM Studio** (point and click). Search for `HumanjavaEnterprises/Qwen3-8B-Cooking-v8-GGUF` in the model browser,
 download the file from step 2, set **GPU offload** and **context length** from the table, turn thinking off, and
@@ -99,8 +101,11 @@ For Ollama with the trained system prompt:
 ```bash
 cp examples/Modelfile .      # edit FROM if you picked another file
 ollama create cooking -f Modelfile
-ollama run cooking --think=false
+ollama run cooking
 ```
+
+The Modelfile sets the chat template (thinking off), the trained system prompt, the context length and the stop
+tokens.
 
 ## 5. Start the server (llama.cpp)
 
@@ -168,7 +173,8 @@ From Python: [examples/chat.py](examples/chat.py) (works with llama-server, Olla
 |---|---|
 | `out of memory` / `failed to allocate` | Lower `-c`, add `-ctk q8_0 -ctv q8_0 -fa on`, use a smaller file, or lower `-ngl` |
 | Very slow answers | Some layers are on the CPU. Raise `-ngl` as far as memory allows, or use a smaller file so all layers fit |
-| Answers start with `<think>` | Thinking is on. Add `--reasoning-budget 0` (llama.cpp), `--think=false` (Ollama), or send `"chat_template_kwargs": {"enable_thinking": false}` |
+| Answers start with `<think>` | Thinking is on. Add `--reasoning-budget 0` (llama.cpp) or send `"chat_template_kwargs": {"enable_thinking": false}`; in Ollama, use our template (step 3 or 4) |
+| Ollama answer never ends, or asks itself questions | Ollama is using a raw template. Pull from `hf.co/...` (step 3) or build with [examples/Modelfile](examples/Modelfile) |
 | It invents quantities | It has no recipe to read. Paste the recipe into the message |
 | Strange characters or loops | Use the trained system prompt; keep temperature around 0.7 |
 | Memory still too tight | Close the browser (it uses GPU memory), or run on the CPU with `-ngl 0` |
