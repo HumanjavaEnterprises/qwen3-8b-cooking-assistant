@@ -71,8 +71,12 @@ Pick one.
 **Ollama** (easiest). Install from [ollama.com](https://ollama.com), then:
 
 ```bash
-ollama run hf.co/HumanjavaEnterprises/Qwen3-8B-Cooking-v8-GGUF:Q4_K_M
+ollama run vveerrgg/qwen3-8b-cooking          # Q4_K_M, 6 GB cards
+ollama run vveerrgg/qwen3-8b-cooking:q6_k     # 8 GB cards
+ollama run vveerrgg/qwen3-8b-cooking:q8_0     # 10 GB and up
 ```
+
+Or straight from Hugging Face: `ollama run hf.co/HumanjavaEnterprises/Qwen3-8B-Cooking-v8-GGUF:Q4_K_M`.
 
 Ollama picks how many layers fit by itself. The model repo carries the chat template, the trained system prompt and
 the sampling settings, so this one line is all you need. (Tested with Ollama 0.12.6. Without that template Ollama

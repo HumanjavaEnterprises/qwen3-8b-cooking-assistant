@@ -17,7 +17,15 @@ the time (base: 83.1%). Four open-weights judges, see [EVALS.md](EVALS.md).
 | **Results** | [EVALS.md](EVALS.md) |
 | **Help refine it** | [Label five answers](https://label-test.humanjava.com/?s=cook4&k=cook-9ac741a1e387): blind, no account, a few minutes |
 
-## Quick start (6 GB GPU)
+## Quick start
+
+With [Ollama](https://ollama.com):
+
+```bash
+ollama run vveerrgg/qwen3-8b-cooking
+```
+
+With llama.cpp on a 6 GB GPU:
 
 ```bash
 pip install -U huggingface_hub
