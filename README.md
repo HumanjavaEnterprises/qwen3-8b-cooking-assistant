@@ -5,8 +5,8 @@ public-domain and openly licensed cookbooks.
 
 It answers from the recipe you give it, asks for the recipe when an answer depends on one it cannot see, and gives
 full answers to general cooking questions. On questions it could not answer without a recipe, base Qwen3-8B invented
-recipe details 25.8% of the time; this model does it 2.7% of the time (four open-weights judges, see
-[EVALS.md](EVALS.md)).
+recipe details 25.8% of the time; this model does it 2.7% of the time. Given the recipe, it reads it correctly 94.8% of
+the time (base: 83.1%). Four open-weights judges, see [EVALS.md](EVALS.md).
 
 | | |
 |---|---|

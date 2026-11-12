@@ -17,6 +17,9 @@ answer invents recipe details:
 | all four agree | 19.1% | 1.0% |
 | any one judge says so | 49.2% | 18.3% |
 
+And when the recipe **is** shown (290 questions, 3 of 4 judges agree): Qwen3-8B reads it correctly 83.1%
+[78.4, 87.0] of the time, this model **94.8%** [91.6, 96.8] (McNemar p < 1e-6).
+
 3 of 4: 72 questions where only the base invents, 3 where only this model does (McNemar p < 1e-17). Caveats: the
 judges are models, and model judges tend to share mistakes, so four agreeing is less than four independent checks.
 Qwen3.8-27B also labelled part of this model's training data. A blind human-labelled set is in progress.
@@ -28,7 +31,7 @@ Same questions, same four judges, each quantised file against full precision:
 | | Q4_K_M | Q6_K | Q8_0 |
 |---|---|---|---|
 | Invents with no recipe, 3 of 4 judges (full precision) | 4.7% (3.3%) | 3.0% (3.3%) | 3.3% (2.7%) |
-| Correct when the recipe is shown (full precision) | 81.4% (80.4%) | 82.7% (80.6%) | 80.4% (80.6%) |
+| Correct when the recipe is shown (full precision) | 95.5% (94.1%) | 95.5% (94.1%) | 95.2% (94.8%) |
 | Difference significant? (McNemar, inventing) | no, p = 0.34 | no, p = 1.0 | no, p = 0.69 |
 
 On Q4_K_M, two judges on their own see slightly more invented details (p = 0.02 and 0.04); pick Q6_K or Q8_0 if that
