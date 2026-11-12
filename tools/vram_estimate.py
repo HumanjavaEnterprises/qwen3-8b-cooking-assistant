@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""How much GPU memory will Qwen3-8B Cooking need on your machine? A planning estimate, no GPU needed.
+"""How much GPU memory will Qwen3-8B Cooking Assistant need on your machine? A planning estimate, no GPU needed.
 
     python tools/vram_estimate.py                     # table for common setups
     python tools/vram_estimate.py --vram 6            # what fits on a 6 GB card

@@ -1,8 +1,8 @@
-# Ollama Modelfile for Qwen3-8B Cooking v8.
+# Ollama Modelfile for Qwen3-8B Cooking Assistant v8.
 #   ollama create cooking -f Modelfile
 #   ollama run cooking
-# Point FROM at the GGUF you downloaded (or use hf.co/HumanjavaEnterprises/Qwen3-8B-Cooking-GGUF:Q4_K_M).
-FROM ./qwen3-8b-cooking-v8-Q4_K_M.gguf
+# Point FROM at the GGUF you downloaded (or use hf.co/HumanjavaEnterprises/Qwen3-8B-Cooking-Assistant-GGUF:Q4_K_M).
+FROM ./qwen3-8b-cooking-assistant-v8-Q4_K_M.gguf
 
 # The system prompt the model was trained with. It works best with exactly this.
 SYSTEM """You are a cooking assistant. You answer questions about dishes, ingredients, techniques and food safety. When you are not sure, you say so."""

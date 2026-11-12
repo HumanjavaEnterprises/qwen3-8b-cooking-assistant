@@ -1,4 +1,4 @@
-# How Qwen3-8B Cooking was checked
+# How Qwen3-8B Cooking Assistant was checked
 
 ## Versions
 
@@ -14,7 +14,7 @@ The rest of this page describes v8.
 Everything is on a fixed held-out set of 682 questions in 26 languages that were never used in training: 300 with the
 recipe shown, 300 that need a recipe the model is not shown, and 82 general cooking questions. Each answer from base
 Qwen3-8B and from this model (both with thinking off) was judged blind. The full write-up, with confidence intervals
-and caveats, is on the [model card](https://huggingface.co/HumanjavaEnterprises/Qwen3-8B-Cooking).
+and caveats, is on the [model card](https://huggingface.co/HumanjavaEnterprises/Qwen3-8B-Cooking-Assistant).
 
 ## Does it invent recipe details?
 
