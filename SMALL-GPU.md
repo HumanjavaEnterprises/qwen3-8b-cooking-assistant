@@ -95,10 +95,10 @@ AMD / Intel, macOS for Apple Silicon), or `brew install llama.cpp` on a Mac.
 
 ```bash
 pip install -U huggingface_hub
-hf download HumanjavaEnterprises/Qwen3-8B-Cooking-Assistant-GGUF qwen3-8b-cooking-assistant-v8-Q4_K_M.gguf --local-dir .
+hf download HumanjavaEnterprises/Qwen3-8B-Cooking-Assistant-GGUF qwen3-8b-cooking-assistant-v1-Q4_K_M.gguf --local-dir .
 ```
 
-Check it against `SHA256SUMS` in the model repo if you like: `sha256sum qwen3-8b-cooking-assistant-v8-Q4_K_M.gguf`.
+Check it against `SHA256SUMS` in the model repo if you like: `sha256sum qwen3-8b-cooking-assistant-v1-Q4_K_M.gguf`.
 
 For Ollama with the trained system prompt:
 
@@ -116,7 +116,7 @@ tokens.
 6 GB card, everything on the GPU:
 
 ```bash
-llama-server -m qwen3-8b-cooking-assistant-v8-Q4_K_M.gguf \
+llama-server -m qwen3-8b-cooking-assistant-v1-Q4_K_M.gguf \
   -ngl 99 -c 8192 -fa on -ctk q8_0 -ctv q8_0 \
   --reasoning-budget 0 --port 8080
 ```
@@ -124,7 +124,7 @@ llama-server -m qwen3-8b-cooking-assistant-v8-Q4_K_M.gguf \
 4 GB card, part on the GPU:
 
 ```bash
-llama-server -m qwen3-8b-cooking-assistant-v8-Q4_K_M.gguf \
+llama-server -m qwen3-8b-cooking-assistant-v1-Q4_K_M.gguf \
   -ngl 23 -c 4096 -fa on -ctk q8_0 -ctv q8_0 \
   --reasoning-budget 0 --port 8080
 ```

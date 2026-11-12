@@ -7,9 +7,9 @@ scored on the same 682 questions by the same four judges, so the rows compare di
 
 | Version | Date | Invents (no recipe, 3 of 4 judges) | Correct (recipe shown, 3 of 4 judges) |
 |---|---|---|---|
-| **v8** (current) | 2026-11-12 | 2.7% (base 25.8%) | 94.8% (base 83.1%) |
+| **v1** (current) | 2026-11-12 | 2.7% (base 25.8%) | 94.8% (base 83.1%) |
 
-The rest of this page describes v8.
+The rest of this page describes v1.
 
 Everything is on a fixed held-out set of 682 questions in 26 languages that were never used in training: 300 with the
 recipe shown, 300 that need a recipe the model is not shown, and 82 general cooking questions. Each answer from base

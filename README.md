@@ -8,6 +8,8 @@ full answers to general cooking questions. On questions it could not answer with
 recipe details 25.8% of the time; this model does it 2.7% of the time. Given the recipe, it reads it correctly 94.8% of
 the time (base: 83.1%). Four open-weights judges, see [EVALS.md](EVALS.md).
 
+*Unofficial fine-tune of Qwen3-8B by Humanjava Enterprises; not made or endorsed by Alibaba Cloud or the Qwen team.*
+
 | | |
 |---|---|
 | **Run it on a small GPU** | [SMALL-GPU.md](SMALL-GPU.md): pick a file for your card, install, start, test, troubleshoot |
@@ -29,8 +31,8 @@ With llama.cpp on a 6 GB GPU:
 
 ```bash
 pip install -U huggingface_hub
-hf download HumanjavaEnterprises/Qwen3-8B-Cooking-Assistant-GGUF qwen3-8b-cooking-assistant-v8-Q4_K_M.gguf --local-dir .
-llama-server -m qwen3-8b-cooking-assistant-v8-Q4_K_M.gguf -ngl 99 -c 8192 -fa on -ctk q8_0 -ctv q8_0 --reasoning-budget 0 --port 8080
+hf download HumanjavaEnterprises/Qwen3-8B-Cooking-Assistant-GGUF qwen3-8b-cooking-assistant-v1-Q4_K_M.gguf --local-dir .
+llama-server -m qwen3-8b-cooking-assistant-v1-Q4_K_M.gguf -ngl 99 -c 8192 -fa on -ctk q8_0 -ctv q8_0 --reasoning-budget 0 --port 8080
 examples/ask.sh          # -> "You would need 900 ml of milk."
 ```
 
