@@ -8,7 +8,7 @@ Thanks for helping. Here is where each kind of report goes.
 | A wrong memory or speed figure, a broken command, or a bug in `examples/` or `tools/` | [Guide or tool bug](https://github.com/HumanjavaEnterprises/qwen3-8b-cooking-assistant/issues/new?template=bug.yml) |
 | A typo, an unclear step, a missing setup | [Docs fix](https://github.com/HumanjavaEnterprises/qwen3-8b-cooking-assistant/issues/new?template=docs.yml), or open a pull request |
 | A security problem | **Privately**, see [SECURITY.md](SECURITY.md) |
-| You'd like to help check answers | [Label five answers](https://label-test.humanjava.com/?s=cook4&k=cook-9ac741a1e387) on Label Test (blind, no account) |
+| You'd like to help check answers | [Label five answers](https://label-test.humanjava.com/?s=cook4&k=cook-9ac741a1e387&src=github-guide) on Label Test (blind, no account) |
 
 ## Pull requests
 

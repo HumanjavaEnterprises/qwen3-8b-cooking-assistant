@@ -4,5 +4,5 @@ contact_links:
     url: https://github.com/HumanjavaEnterprises/qwen3-8b-cooking-assistant/security/advisories/new
     about: Please don't open a public issue for security problems.
   - name: Help check answers on Label Test
-    url: https://label-test.humanjava.com/?s=cook4&k=cook-9ac741a1e387
+    url: https://label-test.humanjava.com/?s=cook4&k=cook-9ac741a1e387&src=github-guide
     about: Label five answers (blind, no account) to help us measure the model.

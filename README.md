@@ -17,7 +17,7 @@ the time (base: 83.1%). Four open-weights judges, see [EVALS.md](EVALS.md).
 | **Full precision** (Transformers, vLLM) | [HumanjavaEnterprises/Qwen3-8B-Cooking-Assistant](https://huggingface.co/HumanjavaEnterprises/Qwen3-8B-Cooking-Assistant) |
 | **Evaluation set** (every question, answer and judge verdict behind the numbers) | [HumanjavaEnterprises/cooking-assistant-eval](https://huggingface.co/datasets/HumanjavaEnterprises/cooking-assistant-eval) |
 | **Results** | [EVALS.md](EVALS.md) |
-| **Help refine it** | [Label five answers](https://label-test.humanjava.com/?s=cook4&k=cook-9ac741a1e387): blind, no account, a few minutes |
+| **Help refine it** | [Label five answers](https://label-test.humanjava.com/?s=cook4&k=cook-9ac741a1e387&src=github-guide): blind, no account, a few minutes |
 
 ## Quick start
 
