@@ -11,8 +11,8 @@ scored on the same 682 questions by the same four judges, so the rows compare di
 
 The rest of this page describes v1.
 
-Everything is on a fixed held-out set of 682 questions in 26 languages that were never used in training: 300 with the
-recipe shown, 300 that need a recipe the model is not shown, and 82 general cooking questions. Each answer from base
+Everything is on a fixed held-out set of 682 questions in 21 languages that were never used in training: 290 with the
+recipe shown, 10 recall questions, 300 that need a recipe the model is not shown, and 82 general cooking questions. Each answer from base
 Qwen3-8B and from this model (both with thinking off) was judged blind. The full write-up, with confidence intervals
 and caveats, is on the [model card](https://huggingface.co/HumanjavaEnterprises/Qwen3-8B-Cooking-Assistant).
 
