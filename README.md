@@ -44,11 +44,15 @@ Other card sizes: `python tools/vram_estimate.py --vram 4` (or 8, 12, ...) print
 | GPU memory | File | Measured memory use |
 |---|---|---|
 | 4 GB | `Q4_K_M`, 23 of 36 layers on the GPU | ~3.5 GB |
-| 6 GB | `Q4_K_M`, context 8,192 | 5.3 GB |
+| 6 GB | `Q4_K_M`, context 8,192, q8_0 KV cache | 5.3 GB (5.8 GB with the default cache) |
 | 8 GB | `Q6_K`, context 8,192 | 6.8 GB |
 | 10 GB and up | `Q8_0` | 9.0 GB |
 
 All three match full precision within noise on our checks. Details and speeds: [SMALL-GPU.md](SMALL-GPU.md).
+
+Serving speed (about 65 tokens/s on a 70 W workstation card, 69 with a draft model on 8 GB) and tested
+llama-server command lines: [SMALL-GPU.md](SMALL-GPU.md#measured-again-speed-on-one-card-2026-11-19) and [serving/](serving/).
+Ollama users seeing long reasoning before each answer: see the thinking note in SMALL-GPU.md, step 3.
 
 ## How to use it
 

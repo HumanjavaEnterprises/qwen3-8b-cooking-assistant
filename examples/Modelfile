@@ -29,5 +29,9 @@ TEMPLATE """{{- range $i, $_ := .Messages }}
 </think>
 
 """
+# Keep this TEMPLATE. Without a PARSER line, some newer Ollama versions (seen on 0.40.16) use the chat template
+# inside the GGUF instead, and that one turns thinking on. "passthrough" returns the answer text unchanged.
+# PARSER needs a recent Ollama (tested on 0.12.6 and 0.40.16); if create rejects it, delete the line.
+PARSER passthrough
 PARAMETER stop "<|im_end|>"
 PARAMETER stop "<|im_start|>"
