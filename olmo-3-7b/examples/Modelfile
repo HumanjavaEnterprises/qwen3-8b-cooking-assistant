@@ -1,0 +1,17 @@
+# Olmo-3-7B Cooking Assistant v2 (Q4_K_M). Download the GGUF next to this file, then: ollama create olmo-3-7b-cooking-assistant -f Modelfile
+FROM ./olmo-3-7b-cooking-assistant-v2-Q4_K_M.gguf
+
+SYSTEM """You are a cooking assistant. You answer questions about dishes, ingredients, techniques and food safety. When you are not sure, you say so."""
+
+# ChatML (= the model's chat_template.jinja): <|im_start|>role, newline, text, <|im_end|>. No thinking block.
+TEMPLATE """{{- range .Messages }}<|im_start|>{{ .Role }}
+{{ .Content }}<|im_end|>
+{{ end }}<|im_start|>assistant
+"""
+PARAMETER stop "<|im_end|>"
+PARAMETER stop "<|endoftext|>"
+PARAMETER stop "<|im_start|>"
+PARAMETER num_ctx 8192
+PARAMETER temperature 0.7
+PARAMETER top_p 0.8
+PARAMETER top_k 20

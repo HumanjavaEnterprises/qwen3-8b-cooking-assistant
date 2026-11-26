@@ -18,6 +18,7 @@ the time (base: 83.1%). Four open-weights judges, see [EVALS.md](EVALS.md).
 | **Evaluation set** (every question, answer and judge verdict behind the numbers) | [HumanjavaEnterprises/cooking-assistant-eval](https://huggingface.co/datasets/HumanjavaEnterprises/cooking-assistant-eval) |
 | **Results** | [EVALS.md](EVALS.md) |
 | **Sibling** (same recipe on GLM-4-9B, added 2026-11-14) | [glm-4-9b-cooking-assistant](https://github.com/HumanjavaEnterprises/glm-4-9b-cooking-assistant) · [HF](https://huggingface.co/HumanjavaEnterprises/GLM-4-9B-Cooking-Assistant) · `ollama run vveerrgg/glm-4-9b-cooking-assistant` |
+| **Sibling** (on OLMo 3 7B, family v2, added 2026-11-26: auditable US-lab lineage, English) | [olmo-3-7b/](olmo-3-7b/) · [HF](https://huggingface.co/HumanjavaEnterprises/Olmo-3-7B-Cooking-Assistant) · [GGUF](https://huggingface.co/HumanjavaEnterprises/Olmo-3-7B-Cooking-Assistant-GGUF) |
 | **Help refine it** | [Label five answers](https://label-test.humanjava.com/?s=cook4&k=cook-9ac741a1e387&src=github-guide): blind, no account, a few minutes |
 
 ## Quick start
@@ -74,6 +75,7 @@ numbers** (scaling, unit conversion).
 | [EVALS.md](EVALS.md) | how the model was checked, and the results |
 | [examples/](examples/) | `ask.sh` (curl), `chat.py` (Python, any OpenAI-compatible server), an Ollama `Modelfile` |
 | [CONTRIBUTING.md](CONTRIBUTING.md) · [SECURITY.md](SECURITY.md) | report a wrong answer, a bug or a security issue |
+| [olmo-3-7b/](olmo-3-7b/) | the Olmo-3-7B Cooking Assistant (v2): quick start, when to pick it, [evals](olmo-3-7b/EVALS.md) |
 | [tools/vram_estimate.py](tools/vram_estimate.py) | memory planner, fitted to measurements (within 0.03 GiB on 21 setups); `python -m pytest tests` |
 
 ## Licence and credits
