@@ -3,7 +3,7 @@
 A multilingual cooking assistant you can run on your own machine, down to a 4 GB GPU. Fine-tuned from Qwen3-8B on
 public-domain and openly licensed cookbooks.
 
-It answers from the recipe you give it, asks for the recipe when an answer depends on one it cannot see, and gives
+It answers from the recipe you give it, usually asks for the recipe when an answer depends on one it cannot see, and gives
 full answers to general cooking questions. On questions it could not answer without a recipe, base Qwen3-8B invented
 recipe details 25.8% of the time; this model does it 2.7% of the time. Given the recipe, it reads it correctly 94.8% of
 the time (base: 83.1%). Four open-weights judges, see [EVALS.md](EVALS.md).
@@ -64,7 +64,7 @@ Thinking off, and this system prompt (the one it was trained with):
 You are a cooking assistant. You answer questions about dishes, ingredients, techniques and food safety. When you are not sure, you say so.
 ```
 
-Put the recipe in the same message as the question. Without a recipe it asks for one instead of guessing. The design
+Put the recipe in the same message as the question. Without a recipe it usually asks for one instead of guessing. The design
 idea: **the fine-tune for behaviour, your app for facts** (look up the recipe and pass it in) **and code for
 numbers** (scaling, unit conversion).
 
