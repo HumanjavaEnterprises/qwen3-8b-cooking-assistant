@@ -18,7 +18,7 @@ the time (base: 83.1%). Four open-weights judges, see [EVALS.md](EVALS.md).
 | **Evaluation set** (every question, answer and judge verdict behind the numbers) | [HumanjavaEnterprises/cooking-assistant-eval](https://huggingface.co/datasets/HumanjavaEnterprises/cooking-assistant-eval) |
 | **Results** | [EVALS.md](EVALS.md) |
 | **Sibling** (same recipe on GLM-4-9B, added 2026-11-14) | [glm-4-9b-cooking-assistant](https://github.com/HumanjavaEnterprises/glm-4-9b-cooking-assistant) · [HF](https://huggingface.co/HumanjavaEnterprises/GLM-4-9B-Cooking-Assistant) · `ollama run vveerrgg/glm-4-9b-cooking-assistant` |
-| **Sibling** (on OLMo 3 7B, family v2, added 2026-11-26: auditable US-lab lineage, English) | [olmo-3-7b/](olmo-3-7b/) · [HF](https://huggingface.co/HumanjavaEnterprises/Olmo-3-7B-Cooking-Assistant) · [GGUF](https://huggingface.co/HumanjavaEnterprises/Olmo-3-7B-Cooking-Assistant-GGUF) |
+| **Sibling** (on OLMo 3 7B, family v2, added 2026-11-26: auditable US-lab lineage, English) | [olmo-3-7b/](olmo-3-7b/) · [HF](https://huggingface.co/HumanjavaEnterprises/Olmo-3-7B-Cooking-Assistant) · [GGUF](https://huggingface.co/HumanjavaEnterprises/Olmo-3-7B-Cooking-Assistant-GGUF) · `ollama run vveerrgg/olmo-3-7b-cooking-assistant` |
 | **Sibling** (on EuroLLM-9B, family v2, added 2026-11-26: auditable European-lab lineage, multilingual; human review pending) | [eurollm-9b/](eurollm-9b/) · [HF](https://huggingface.co/HumanjavaEnterprises/EuroLLM-9B-Cooking-Assistant) · [GGUF](https://huggingface.co/HumanjavaEnterprises/EuroLLM-9B-Cooking-Assistant-GGUF) |
 | **Help refine it** | [Label five answers](https://label-test.humanjava.com/?s=cook4&k=cook-9ac741a1e387&src=github-guide): blind, no account, a few minutes |
 
