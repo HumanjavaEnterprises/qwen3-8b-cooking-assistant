@@ -15,6 +15,7 @@ the UTTER consortium.*
 |---|---|
 | **GGUF** (llama.cpp, Ollama, LM Studio) | [HumanjavaEnterprises/EuroLLM-9B-Cooking-Assistant-GGUF](https://huggingface.co/HumanjavaEnterprises/EuroLLM-9B-Cooking-Assistant-GGUF) |
 | **Full precision** (Transformers, vLLM) | [HumanjavaEnterprises/EuroLLM-9B-Cooking-Assistant](https://huggingface.co/HumanjavaEnterprises/EuroLLM-9B-Cooking-Assistant) |
+| **Ollama** | [Ollama](https://ollama.com/vveerrgg/eurollm-9b-cooking-assistant): `ollama run vveerrgg/eurollm-9b-cooking-assistant:q6_k` |
 | **Evaluation set** (config `eurollm-9b-v2`) | [HumanjavaEnterprises/cooking-assistant-eval](https://huggingface.co/datasets/HumanjavaEnterprises/cooking-assistant-eval) |
 | **Results** | [EVALS.md](EVALS.md) |
 
@@ -27,7 +28,7 @@ ollama run hf.co/HumanjavaEnterprises/EuroLLM-9B-Cooking-Assistant-GGUF:Q4_K_M
 # llama.cpp on an 8 GB GPU
 hf download HumanjavaEnterprises/EuroLLM-9B-Cooking-Assistant-GGUF eurollm-9b-cooking-assistant-v2-Q4_K_M.gguf --local-dir .
 llama-server -m eurollm-9b-cooking-assistant-v2-Q4_K_M.gguf --jinja -ngl 99 -c 8192 --port 8080
-examples/ask.sh          # -> "900 ml milk."
+examples/ask.sh          # -> "Use 900 ml of milk (300 ml x 3)."
 ```
 
 | GPU memory | File |
@@ -54,7 +55,7 @@ You are a cooking assistant. You answer questions about dishes, ingredients, tec
 
 With no system prompt, the embedded template adds a version that also names the model ("You are the Cooking
 Assistant by Humanjava Enterprises, fine-tuned from EuroLLM-9B. ..."); the Ollama files use that one. Put the recipe in the
-same message as the question. Without a recipe it usually asks for one.
+same message as the question. Without a recipe it usually asks for it, or answers with a clearly hypothetical amount.
 
 ## Licence and credits
 
